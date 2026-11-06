@@ -1,0 +1,117 @@
+export type Question = {
+  id: string;
+  number: number | string;
+  type: 'choice' | 'text';
+  grading?: 'auto' | 'manual';
+  sourcePage?: number;
+  originalNumber?: string;
+  prompt: string;
+  options?: { id: string; text: string }[];
+  answer?: string;
+  explanation?: string;
+  weight: number;
+  referenceAnswer?: string;
+  keywords?: string[];
+};
+export type Group = {
+  id: string;
+  title: string;
+  instructions?: string;
+  passage?: string;
+  transcript?: string;
+  audioUrl?: string;
+  questionType?: string;
+  questions: Question[];
+};
+export type Section = {
+  id: string;
+  title: string;
+  durationMinutes: number;
+  groups: Group[];
+};
+export type Paper = {
+  id: string;
+  title: string;
+  subtitle?: string;
+  kind: 'practice' | 'past';
+  year: number;
+  month: number;
+  set?: number;
+  available: boolean;
+  durationMinutes: number;
+  source?: { label: string; url?: string };
+  sections?: Section[];
+  questionCount?: number;
+  manualQuestionCount?: number;
+  document?: { id: string; filename: string; pages: number; size: number; sha256: string };
+  importedAt?: string;
+  sharedFrom?: { title: string; author: string };
+};
+export type ResultItem = {
+  questionId: string;
+  number: number | string;
+  sectionId: string;
+  correct: boolean | null;
+  answer: string;
+  expected?: string;
+  score: number | null;
+  maxScore: number;
+  explanation?: string;
+  referenceAnswer?: string;
+  feedback?: string;
+};
+export type Attempt = {
+  id: string;
+  paperId: string;
+  paperTitle: string;
+  status: 'active' | 'submitted';
+  startedAt: string;
+  deadlineAt: string;
+  submittedAt?: string;
+  currentSection: string;
+  currentGroup?: string;
+  answers: Record<string, string>;
+  sectionSpent: Record<string, number>;
+  errorReasons?: Record<string, string>;
+  result?: {
+    objectiveScore: number;
+    objectiveMax: number;
+    subjectiveScore: number | null;
+    totalScore: number | null;
+    estimated710: number | null;
+    correctCount: number;
+    questionCount: number;
+    items: ResultItem[];
+  };
+};
+export type Word = {
+  id: string;
+  word: string;
+  phonetic: string;
+  definition: string;
+  example?: string;
+  context?: string;
+  paperTitle?: string;
+  createdAt: string;
+  mastered: boolean;
+  reason?: string;
+  encounters?: { at: string; context: string; paperId?: string; attemptId?: string }[];
+  reviewHistory?: { id: string; at: string; rating: 'remembered' | 'forgotten' }[];
+};
+export type User = {
+  id: string;
+  username: string;
+  displayName: string;
+  role: 'admin' | 'user';
+  active: boolean;
+  createdAt: string;
+};
+export type Workspace = {
+  papers: Paper[];
+  attempts: Attempt[];
+  words: Word[];
+  accessRequired?: boolean;
+  user?: User | null;
+};
+export type Session = { attempt: Attempt; paper: Paper; user?: User | null };
+export type View = 'papers' | 'words' | 'mistakes' | 'history' | 'manage' | 'insights' | 'admin';

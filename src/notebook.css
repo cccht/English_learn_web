@@ -1,0 +1,332 @@
+.nk-root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  background: #f3f5f2;
+}
+.nk-tools-wrap {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 3;
+  background: #fff;
+}
+.nk-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  min-height: 48px;
+  padding: 2px 3px;
+  border-bottom: 1px solid #e6ece5;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nk-toolbar > button,
+.nk-settings button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 5px;
+  color: #748473;
+  flex-shrink: 0;
+  background: none;
+  cursor: pointer;
+}
+.nk-toolbar > button.selected {
+  color: #246b56;
+  background: #e9f2ea;
+}
+.nk-toolbar > button:disabled,
+.nk-settings button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.nk-toolbar > button:hover:not(:disabled) {
+  background: #eff4ed;
+}
+.nk-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  min-height: 28px;
+  background: #fff;
+  border-bottom: 1px solid #e5eae2;
+  font-size: 10px;
+  color: #80927a;
+  flex-shrink: 0;
+}
+.nk-status small {
+  margin-left: auto;
+  font-size: 10px;
+}
+.nk-status button {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  height: 18px;
+  color: #5e875e;
+}
+.nk-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  /* Classic scrollbars must not repeatedly change the paper's fit-to-width scale. */
+  scrollbar-gutter: stable;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding: 12px;
+  position: relative;
+}
+.nk-page-space {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 auto 15px;
+  overflow: hidden;
+}
+@supports not (scrollbar-gutter: stable) {
+  .nk-scroll {
+    overflow-y: scroll;
+  }
+}
+.nk-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  background: #fff;
+  box-shadow: 0 0 0 1px #e5e9e1;
+  touch-action: none;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+.nk-page.tool-pen,
+.nk-page.tool-highlighter {
+  cursor: crosshair;
+}
+.nk-page.tool-eraser {
+  cursor: cell;
+}
+.nk-article {
+  font-family: 'Source Serif 4', 'Noto Sans SC', serif;
+  font-size: 30px;
+  line-height: 1.7;
+  color: #374c3a;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 42px 40px 30px;
+  font-synthesis: none;
+  letter-spacing: 0;
+}
+.nk-article .ex-word {
+  border-radius: 0 !important;
+}
+.nk-ink {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+.nk-settings {
+  position: absolute;
+  right: 8px;
+  top: 100%;
+  width: 278px;
+  max-width: calc(100% - 16px);
+  background: #fff;
+  border: 1px solid #d9e3d2;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px #2942241b;
+  padding: 12px;
+  z-index: 5;
+}
+.nk-settings-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #456b3e;
+}
+.nk-settings-heading button {
+  height: 28px;
+  min-width: 28px;
+}
+.nk-swatches {
+  display: flex;
+  gap: 1px;
+  margin: 8px 0;
+}
+.nk-swatches > button > span {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+.nk-swatches > button[aria-pressed='true'] > span {
+  outline: 2px solid #7e9775;
+  outline-offset: 3px;
+}
+.nk-width {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #798b6e;
+  min-height: 36px;
+}
+.nk-width input {
+  flex: 1;
+  min-width: 0;
+  accent-color: #246b56;
+  width: 100px;
+}
+.nk-width span {
+  width: 17px;
+  text-align: right;
+}
+.nk-check {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  font-size: 12px;
+  color: #657e57;
+  min-height: 36px;
+}
+.nk-check input {
+  width: 17px;
+  height: 17px;
+  accent-color: #246b56;
+}
+.nk-zoom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-block: 1px solid #edf1e8;
+  margin-top: 8px;
+}
+.nk-zoom > button {
+  font-size: 12px;
+}
+.nk-setting-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 6px;
+}
+.nk-setting-actions > button {
+  font-size: 11px;
+  gap: 6px;
+  padding: 0 6px;
+}
+.nk-warning {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #a26343;
+  background: #faf0e8;
+  padding: 8px 12px;
+  flex-shrink: 0;
+  max-height: 135px;
+  overflow: auto;
+}
+.nk-warning > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-top: 6px;
+}
+.nk-warning button {
+  font-size: 10px;
+  color: #885435;
+  text-decoration: underline;
+  padding: 3px 0;
+}
+.nk-typed {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  background: white;
+  border: 1px solid #ccd9c2;
+  border-radius: 6px;
+  z-index: 2;
+  box-shadow: 0 5px 20px #2445211a;
+  overflow: hidden;
+}
+.nk-typed > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #edf2e6;
+}
+.nk-typed label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: #62844d;
+}
+.nk-typed button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+}
+.nk-typed textarea {
+  width: 100%;
+  min-height: 100px;
+  height: 130px;
+  resize: vertical;
+  max-height: 30dvh;
+  border: 0;
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #465d3d;
+  display: block;
+  outline-offset: -2px;
+}
+.nk-typed textarea::placeholder {
+  color: #a2ad98;
+}
+.nk-modal {
+  height: 65dvh;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+.nk-modal > .nk-root {
+  flex: 1;
+}
+@media (max-width: 420px) {
+  .nk-toolbar {
+    gap: 0;
+    padding-inline: 2px;
+  }
+  .nk-toolbar > button {
+    min-width: 43px;
+    width: 43px;
+  }
+  .nk-scroll {
+    padding: 12px;
+  }
+  .nk-settings {
+    right: 5px;
+  }
+  .nk-typed {
+    left: 9px;
+    right: 9px;
+    bottom: 9px;
+  }
+}

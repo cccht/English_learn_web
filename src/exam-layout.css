@@ -1,0 +1,543 @@
+.ex-active {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  overflow: hidden;
+  width: 100%;
+  background: white;
+  padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
+}
+.ex-active .ex-top {
+  display: flex;
+  min-height: 64px;
+  padding: 8px 16px;
+  gap: 12px;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e3e8e1;
+}
+.ex-active .ex-title {
+  min-width: 0;
+  flex: 1;
+}
+.ex-active .ex-title h1 {
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-height: 1.5;
+}
+.ex-active .ex-title > span {
+  font-size: 10px;
+}
+.ex-active .ex-countdown {
+  margin-left: 0;
+  padding-right: 8px;
+  gap: 7px;
+  flex: none;
+}
+.ex-active .ex-countdown > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+}
+.ex-active .ex-countdown strong {
+  font-size: 20px;
+  line-height: 1.3;
+}
+.ex-active .ex-countdown span {
+  font-size: 10px;
+}
+.ex-active .ex-submit-btn {
+  min-width: 75px;
+  min-height: 44px;
+  font-size: 12px;
+  padding: 9px 13px;
+}
+.ex-pinned-status {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 38px;
+  padding: 5px 18px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e8ede5;
+  background: #fbfcfa;
+}
+.ex-current-time {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #66835c;
+  white-space: nowrap;
+}
+.ex-current-time strong {
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  color: #355d3d;
+  font-size: 12px;
+}
+.ex-current-time small {
+  font-size: 10px;
+  color: #8c9c83;
+}
+.ex-total-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #73836a;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.ex-total-progress strong {
+  color: #246b56;
+  font-weight: 600;
+}
+.ex-total-progress progress {
+  width: 110px;
+  height: 4px;
+  border: 0;
+  border-radius: 2px;
+  overflow: hidden;
+  appearance: none;
+}
+.ex-total-progress progress::-webkit-progress-bar {
+  background: #e5eddf;
+}
+.ex-total-progress progress::-webkit-progress-value {
+  background: #508466;
+}
+.ex-total-progress progress::-moz-progress-bar {
+  background: #508466;
+}
+.ex-active .ex-save-state {
+  font-size: 11px;
+  gap: 5px;
+  white-space: nowrap;
+}
+.ex-active .ex-section-tabs {
+  min-height: 44px;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+.ex-active .ex-section-tabs > button {
+  padding: 9px 10px;
+  min-height: 44px;
+  gap: 9px;
+  flex-wrap: nowrap;
+}
+.ex-active .ex-section-tabs strong {
+  font-size: 13px;
+}
+.ex-active .ex-section-index {
+  font-size: 10px;
+}
+.ex-active .ex-workspace {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.ex-active .ex-workspace-bar {
+  padding: 3px 12px;
+  min-height: 50px;
+  gap: 12px;
+  margin: 0;
+  border-bottom: 1px solid #e2e9dd;
+  flex-shrink: 0;
+  background: white;
+}
+.ex-group-picker {
+  min-width: 0;
+  flex: 1;
+  max-width: 450px;
+  min-height: 44px;
+  border: 0;
+  background: #fff;
+  color: #416439;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 4px;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+}
+.ex-workspace-tools {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.ex-workspace-tools > .icon-button {
+  width: 44px;
+  height: 44px;
+  color: #688360;
+}
+.ex-mode-picker {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #8b9e7d;
+  padding-left: 8px;
+  border-left: 1px solid #e9eee4;
+  margin-left: 4px;
+}
+.ex-mode-picker select {
+  font-size: 12px;
+  min-width: 65px;
+  min-height: 44px;
+  border: 0;
+  color: #6c865f;
+  background: #fff;
+  padding: 8px 4px;
+}
+.ex-active .ex-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+  overflow: hidden;
+}
+.ex-active .ex-reader-pane {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  max-height: none;
+  overflow: hidden;
+  width: auto;
+  min-height: 0;
+  border: 0;
+  border-right: 1px solid #dbe5d3;
+  border-radius: 0;
+  background: #f5f7f2;
+}
+.ex-active .ex-answer-pane {
+  padding: 20px 24px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  min-height: 0;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+}
+.ex-pane-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+  color: #8ba17d;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #edf1e7;
+  margin-bottom: 13px;
+}
+.ex-pane-heading strong {
+  color: #517547;
+  font-size: 13px;
+  font-weight: 500;
+}
+.ex-instruction-details {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #8d9e81;
+  margin-bottom: 18px;
+}
+.ex-instruction-details summary {
+  cursor: pointer;
+  color: #728e64;
+}
+.ex-instruction-details p {
+  font-size: 13px;
+  margin: 8px 0;
+  line-height: 1.9;
+}
+.ex-active .ex-question-heading h3 {
+  font-size: 15px;
+}
+.ex-active .ex-question-heading {
+  gap: 9px;
+}
+.ex-active .ex-options {
+  padding-left: 0;
+  gap: 8px;
+}
+.ex-active .ex-options label {
+  min-height: 44px;
+  padding: 11px 12px;
+  font-size: 14px;
+}
+.ex-active .ex-options-compact {
+  gap: 6px;
+}
+.ex-active .ex-options-compact label {
+  font-size: 13px;
+  padding: 9px 10px;
+}
+.ex-active .ex-writing {
+  margin-left: 0;
+}
+.ex-active .ex-writing textarea {
+  min-height: 300px;
+  font-size: 17px;
+}
+.ex-active .ex-audio {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+}
+.ex-active .ex-audio-icon {
+  width: 32px;
+  height: 32px;
+  flex-basis: 32px;
+}
+.ex-active .ex-audio-label strong {
+  font-size: 12px;
+}
+.ex-active .ex-audio-label > span {
+  font-size: 10px;
+}
+.ex-inline-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid #e5ecdf;
+  margin-top: 25px;
+  padding-top: 20px;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.ex-inline-navigation .btn {
+  font-size: 12px;
+  padding-inline: 12px;
+}
+.ex-active .ex-error-banner {
+  margin: 0;
+  border-radius: 0;
+  flex-shrink: 0;
+  font-size: 12px;
+  padding: 7px 13px;
+  max-height: 120px;
+  overflow: auto;
+}
+.ex-phone-tabs {
+  display: flex;
+  flex-shrink: 0;
+  min-height: 44px;
+  border-bottom: 1px solid #dce6d4;
+}
+.ex-phone-tabs button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #8c9f7c;
+  font-size: 13px;
+  min-height: 44px;
+  background: #fafcf7;
+  border-bottom: 2px solid transparent;
+}
+.ex-phone-tabs button.active {
+  color: #246b56;
+  background: #edf5e8;
+  border-bottom-color: #246b56;
+}
+.ex-phone-tabs button > span {
+  font-size: 11px;
+}
+.ex-layout-phone {
+  max-width: 540px;
+  margin-inline: auto;
+  border-inline: 1px solid #edf1e7;
+}
+.ex-layout-phone .ex-top {
+  min-height: 59px;
+  padding: 7px 8px;
+  gap: 6px;
+}
+.ex-layout-phone .ex-title > span {
+  display: none;
+}
+.ex-layout-phone .ex-title h1 {
+  font-size: 13px;
+}
+.ex-layout-phone .ex-top > .icon-button {
+  width: 36px;
+  height: 44px;
+  flex-shrink: 0;
+}
+.ex-layout-phone .ex-countdown {
+  padding: 0;
+  gap: 0;
+}
+.ex-layout-phone .ex-countdown > svg {
+  display: none;
+}
+.ex-layout-phone .ex-countdown strong {
+  font-size: 17px;
+}
+.ex-layout-phone .ex-countdown span {
+  font-size: 9px;
+}
+.ex-layout-phone .ex-submit-btn {
+  min-width: 54px;
+  font-size: 11px;
+  padding: 8px;
+  gap: 5px;
+}
+.ex-layout-phone .ex-submit-btn svg {
+  width: 14px;
+}
+.ex-layout-phone .ex-pinned-status {
+  padding: 6px 10px;
+  gap: 10px;
+  min-height: 34px;
+  flex-wrap: wrap;
+}
+.ex-layout-phone .ex-current-time {
+  font-size: 10px;
+  gap: 5px;
+}
+.ex-layout-phone .ex-current-time strong {
+  font-size: 11px;
+}
+.ex-layout-phone .ex-current-time small {
+  display: none;
+}
+.ex-layout-phone .ex-current-time svg {
+  width: 12px;
+}
+.ex-layout-phone .ex-total-progress {
+  font-size: 10px;
+  gap: 6px;
+}
+.ex-layout-phone .ex-total-progress progress {
+  width: 30px;
+}
+.ex-layout-phone .ex-save-state {
+  font-size: 10px;
+  gap: 3px;
+}
+.ex-layout-phone .ex-save-state svg {
+  width: 12px;
+}
+.ex-layout-phone .ex-section-tabs {
+  padding: 0 4px;
+}
+.ex-layout-phone .ex-section-tabs > button {
+  padding: 8px 4px;
+}
+.ex-layout-phone .ex-section-tabs strong {
+  font-size: 12px;
+}
+.ex-layout-phone .ex-section-index {
+  display: none;
+}
+.ex-layout-phone .ex-workspace-bar {
+  padding: 3px 6px;
+  gap: 4px;
+}
+.ex-layout-phone .ex-group-picker {
+  font-size: 12px;
+  padding: 8px 2px;
+}
+.ex-layout-phone .ex-workspace-tools {
+  gap: 0;
+}
+.ex-layout-phone .ex-workspace-tools > .icon-button {
+  width: 36px;
+  height: 44px;
+}
+.ex-layout-phone .ex-workspace-tools > .icon-button svg {
+  width: 17px;
+}
+.ex-layout-phone .ex-mode-picker {
+  padding-left: 4px;
+  margin-left: 2px;
+  gap: 0;
+}
+.ex-layout-phone .ex-mode-picker > svg {
+  display: none;
+}
+.ex-layout-phone .ex-mode-picker select {
+  font-size: 11px;
+  min-width: 51px;
+  max-width: 58px;
+  padding-inline: 0;
+}
+.ex-layout-phone .ex-split {
+  grid-template-columns: minmax(0, 1fr);
+}
+.ex-layout-phone .ex-split[data-phone-panel='article'] > .ex-answer-pane {
+  display: none;
+}
+.ex-layout-phone .ex-split[data-phone-panel='answers'] > .ex-reader-pane {
+  display: none;
+}
+.ex-layout-phone .ex-reader-pane {
+  border-right: 0;
+}
+.ex-layout-phone .ex-answer-pane {
+  padding: 17px 15px;
+}
+.ex-layout-phone .ex-writing textarea {
+  font-size: 16px;
+  min-height: 230px;
+}
+.ex-active .ex-question-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.ex-active .ex-question-buttons button {
+  width: 44px;
+  height: 44px;
+  flex-basis: 44px;
+}
+.ex-card-summary {
+  font-size: 12px;
+  color: #7d946f;
+  margin: 0 0 20px;
+}
+.ex-note-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #487342;
+  font-size: 12px;
+  margin-top: 15px;
+  padding: 10px 0;
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+  .ex-active .ex-answer-pane {
+    padding: 16px;
+  }
+  .ex-active .ex-options-compact {
+    grid-template-columns: 1fr;
+  }
+  .ex-total-progress progress {
+    width: 70px;
+  }
+}
+@media (max-width: 360px) {
+  .ex-layout-phone .ex-save-state {
+    margin-left: auto;
+  }
+  .ex-layout-phone .ex-pinned-status {
+    gap: 7px;
+  }
+  .ex-layout-phone .ex-total-progress progress {
+    display: none;
+  }
+}

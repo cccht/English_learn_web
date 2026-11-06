@@ -1,0 +1,125 @@
+:root {
+  --buddy-heading-size: 64px;
+  --buddy-empty-size: 108px;
+  --buddy-brand-size: 40px;
+}
+.buddy-illustration {
+  display: block;
+  width: var(--buddy-heading-size);
+  height: var(--buddy-heading-size);
+  object-fit: contain;
+  object-position: center;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  user-select: none;
+}
+.buddy-size-brand {
+  width: var(--buddy-brand-size);
+  height: var(--buddy-brand-size);
+}
+.buddy-size-heading {
+  width: var(--buddy-heading-size);
+  height: var(--buddy-heading-size);
+}
+.buddy-size-feature {
+  width: 64px;
+  height: 64px;
+}
+.buddy-size-empty {
+  width: var(--buddy-empty-size);
+  height: var(--buddy-empty-size);
+  margin: 0 auto 16px;
+}
+.buddy-size-rail {
+  width: 100%;
+  height: 139px;
+  max-width: 200px;
+  margin: 0 auto 19px;
+}
+.buddy-size-dialog {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 18px;
+}
+.buddy-size-report {
+  width: 84px;
+  height: 84px;
+}
+.page-heading-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+.page-heading-main > div {
+  min-width: 0;
+}
+.page-heading-main p {
+  overflow-wrap: anywhere;
+}
+.in-page .empty {
+  --buddy-empty-size: 84px;
+}
+.brand-mark.brand-mascot {
+  background: transparent;
+  padding: 0;
+  overflow: visible;
+}
+.feature-copy-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.feature-copy-title h3 {
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.feature-copy-title .buddy-illustration {
+  width: 62px;
+  height: 62px;
+}
+.feature-copy-title + p {
+  margin-top: 12px;
+}
+.start-illustrated-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+.start-illustrated-heading > div {
+  min-width: 0;
+}
+.start-illustrated-heading .buddy-illustration {
+  margin: 0;
+}
+.start-illustrated-heading .source-title {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  :root {
+    --buddy-heading-size: 52px;
+    --buddy-empty-size: 92px;
+  }
+  .page-heading-main {
+    gap: 12px;
+  }
+  .buddy-size-report {
+    width: 66px;
+    height: 66px;
+  }
+  .buddy-size-dialog {
+    width: 70px;
+    height: 70px;
+  }
+  .feature-copy-title .buddy-illustration {
+    width: 52px;
+    height: 52px;
+  }
+  .start-illustrated-heading {
+    gap: 12px;
+  }
+}

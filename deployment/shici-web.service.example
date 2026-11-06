@@ -1,0 +1,21 @@
+[Unit]
+Description=Shici CET-6 learning website
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=shici
+Group=shici
+Type=simple
+WorkingDirectory=/opt/shici
+Environment=NODE_ENV=production
+Environment=PORT=3001
+Environment=SHICI_ACCESS_FILE=/opt/shici/data/public-access.json
+ExecStart=/usr/bin/node /opt/shici/server/app.mjs
+Restart=always
+RestartSec=5
+TimeoutStopSec=15
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

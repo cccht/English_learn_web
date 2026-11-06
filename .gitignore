@@ -1,0 +1,36 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+dist-preview/
+*.tsbuildinfo
+
+# Private runtime data and credentials
+/data/
+.env
+.env.*
+!.env.example
+*.log
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.db
+*.db-*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local-only deliverables, downloaded materials and machine configuration
+/output/
+/downloads/
+/软件著作权申请资料/
+/.vscode/
+/deployment/*.service
+
+# Test output and operating-system caches
+test-results/
+playwright-report/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db

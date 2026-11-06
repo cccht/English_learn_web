@@ -1,0 +1,49 @@
+{
+  "practice": {
+    "original": "originals/practice-feet-v2.png",
+    "web": "../../../public/images/feature-illustrations/practice-feet-v2.webp",
+    "generatedSource": "originals/practice-feet-v2.png",
+    "sourceSha256": "841820a168df004bf41bdf2dbdd3a626ed929f684829fcb9e67f02d5be7e76db",
+    "webSha256": "5dc23bde2c3047d0eed09bb6ef767c54f853416f45694e8c67b21f5b8cb9482a",
+    "bytes": 28042,
+    "width": 1200,
+    "height": 400,
+    "pix_fmt": "yuv420p",
+    "revisionNote": "Corrected the seated legs and shoes while preserving the rest of the scene.",
+    "previousVersions": [
+      {
+        "original": "originals/practice.png",
+        "web": "../../../public/images/feature-illustrations/practice.webp",
+        "generatedSource": "originals/practice.png",
+        "sourceSha256": "ba8c40e0c7130e07c6fc9644a02e6e29da42886686215a0b2c31168fcb7f6ca8",
+        "webSha256": "53f5786ef762379c6625ee6807fb8a4063cf8fd7cd3441e620e72f56a28e2297",
+        "bytes": 27728,
+        "width": 1200,
+        "height": 400,
+        "pix_fmt": "yuv420p"
+      }
+    ]
+  },
+  "notes": {
+    "original": "originals/notes.png",
+    "web": "../../../public/images/feature-illustrations/notes.webp",
+    "generatedSource": "originals/notes.png",
+    "sourceSha256": "f49747a6ec6d25d71f26b03b0dfabe6d6e474b63601e9b1f93907eabc91c0bcc",
+    "webSha256": "89510d82d507e2e8308d094ad6139787dda360f8463995b728e988c7f8d3c1f2",
+    "bytes": 23696,
+    "width": 1200,
+    "height": 400,
+    "pix_fmt": "yuv420p"
+  },
+  "review": {
+    "original": "originals/review.png",
+    "web": "../../../public/images/feature-illustrations/review.webp",
+    "generatedSource": "originals/review.png",
+    "sourceSha256": "3f0b8ec87171430de228a5e6e07e65f634e986a9a87714e0aa7650035048ab80",
+    "webSha256": "6437880fb19a38afaa8d148137b741644eb1fbdb5cc8f955c67dbfc08f694323",
+    "bytes": 24132,
+    "width": 1200,
+    "height": 400,
+    "pix_fmt": "yuv420p"
+  }
+}

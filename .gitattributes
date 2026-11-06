@@ -1,0 +1,7 @@
+# Keep bundled test fixtures and visual/font assets byte-for-byte intact.
+*.pdf binary
+*.png binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ico binary

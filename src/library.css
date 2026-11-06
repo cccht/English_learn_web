@@ -1,0 +1,572 @@
+.modal.modal-wide {
+  width: 1060px;
+}
+.library-form-row,
+.pdf-editor-toolbar,
+.pdf-source-toolbar,
+.pdf-question-navigation,
+.library-selection-toolbar,
+.share-code-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.library-form-row {
+  align-items: flex-end;
+}
+.library-form-row > label {
+  flex: 1;
+  min-width: 0;
+}
+.library-form-row > .grow {
+  flex: 3;
+}
+.pdf-editor label:not(.library-checkbox),
+.share-form > label:not(.library-checkbox),
+.share-result > label,
+.share-code-form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  color: #526259;
+  min-width: 0;
+}
+.pdf-editor input:not([type='checkbox']),
+.pdf-editor select,
+.pdf-editor textarea,
+.share-form input:not([type='checkbox']),
+.share-form select,
+.share-result input,
+.share-result textarea,
+.share-code-form input,
+.share-record input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #d8e2dc;
+  border-radius: 5px;
+  background: #fff;
+  color: var(--ink);
+  padding: 9px 10px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.pdf-editor textarea {
+  resize: vertical;
+}
+.library-segments {
+  display: inline-flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid #dce5df;
+  border-radius: 6px;
+  background: #f4f7f5;
+  flex-shrink: 0;
+}
+.library-segments button {
+  min-height: 34px;
+  padding: 7px 15px;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.library-segments button[aria-pressed='true'] {
+  color: var(--green);
+  background: #fff;
+  box-shadow: 0 1px 3px #213e2610;
+  font-weight: 600;
+}
+.import-modes {
+  margin-bottom: 20px;
+}
+.pdf-metadata {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #64766c;
+}
+.pdf-metadata summary {
+  cursor: pointer;
+}
+.pdf-metadata .library-form-row {
+  margin-top: 12px;
+}
+.library-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #53635c;
+}
+.library-checkbox input,
+.manage-table-selectable input[type='checkbox'],
+.share-receive-list input {
+  width: 17px;
+  height: 17px;
+  margin: 2px 0 0;
+  flex-shrink: 0;
+  accent-color: var(--green);
+}
+.text-error,
+.danger {
+  color: #a54d43;
+}
+.pdf-warnings {
+  margin: 16px 0;
+  background: #fff9ec;
+  border-left: 3px solid #d6bd7e;
+  padding: 12px 15px;
+  color: #80662e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.pdf-warnings summary,
+.pdf-group-fields summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.pdf-warnings ul {
+  padding-left: 19px;
+  margin: 8px 0 0;
+}
+.pdf-editor-toolbar {
+  padding: 14px 0;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+.pdf-editor-toolbar > .btn {
+  margin-left: auto;
+}
+.pdf-editor-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.1fr);
+  gap: 22px;
+  align-items: start;
+}
+.pdf-source {
+  min-width: 0;
+  position: sticky;
+  top: 0;
+}
+.pdf-source-toolbar {
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.pdf-source-toolbar select {
+  width: 100px;
+}
+.pdf-source-toolbar .icon-button {
+  width: 34px;
+  height: 34px;
+}
+.pdf-source-content {
+  height: min(590px, 57dvh);
+  min-height: 230px;
+  overflow: auto;
+  border: 1px solid #e0e7e3;
+  background: #f1f4f3;
+}
+.pdf-source-content > img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+.pdf-source-content pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0;
+}
+.pdf-preview-error {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  min-height: 180px;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.pdf-question-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 0;
+}
+.pdf-question-navigation {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.pdf-question-navigation .icon-button {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 34px;
+}
+.pdf-question-navigation select {
+  flex: 1;
+}
+.pdf-options {
+  display: grid;
+  gap: 12px;
+}
+.pdf-option-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.pdf-option-row > label {
+  flex: 1;
+}
+.pdf-option-row .icon-button {
+  flex: 0 0 26px;
+  width: 26px;
+}
+.pdf-group-fields {
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+}
+.pdf-group-fields > label {
+  margin-top: 14px;
+}
+.pdf-editor-footer {
+  position: sticky;
+  bottom: 0;
+  padding: 15px 0;
+  margin-top: 20px;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  z-index: 1;
+}
+.pdf-zoom-tools {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+  margin: -2px 0 8px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.pdf-zoom-tools .icon-button {
+  width: 30px;
+  height: 28px;
+}
+.pdf-zoom-tools > span {
+  width: 38px;
+  text-align: center;
+}
+.pdf-editor-footer > div {
+  display: flex;
+  gap: 9px;
+  flex-shrink: 0;
+}
+.pdf-progress {
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+.pdf-progress h3 {
+  font-size: 19px;
+}
+.pdf-progress p,
+.pdf-progress > span {
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.pdf-progress progress {
+  width: min(100%, 360px);
+  height: 10px;
+  accent-color: var(--green);
+}
+.pdf-import-success {
+  padding: 12px 0;
+  color: var(--green);
+  font-size: 13px;
+}
+.pdf-recent {
+  margin-top: 26px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.pdf-recent h3 {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.pdf-recent button {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.pdf-recent button > span {
+  overflow-wrap: anywhere;
+}
+.pdf-recent small {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+.library-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+  margin: 0 0 24px;
+  gap: 20px;
+}
+.library-tabs button {
+  font-size: 13px;
+  padding: 13px 3px;
+  border-bottom: 2px solid transparent;
+}
+.library-tabs button[aria-selected='true'] {
+  border-color: var(--green);
+  color: var(--green);
+  font-weight: 600;
+}
+.library-selection-toolbar {
+  margin-bottom: 17px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+.library-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid #dce4df;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 170px;
+  height: 40px;
+  color: var(--muted);
+}
+.library-search input {
+  border: 0;
+  background: transparent;
+  padding: 8px 0;
+  min-width: 0;
+  width: 100%;
+  font-size: 12px;
+}
+.manage-table-selectable .manage-table-head,
+.manage-table-selectable .manage-table-row {
+  grid-template-columns: 22px minmax(0, 1fr) 130px 115px;
+  gap: 15px;
+}
+.manage-table-selectable .manage-table-head {
+  padding-inline: 0;
+}
+.manage-table-selectable .manage-table-row > input {
+  align-self: center;
+}
+.manage-table-selectable .manage-table-row > div {
+  min-width: 0;
+}
+.manage-table-selectable .manage-table-row > div > strong,
+.share-paper-list strong {
+  overflow-wrap: anywhere;
+}
+.pdf-import .upload-zone strong {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.manage-table-selectable .manage-table-row > .text-button {
+  display: inline-flex;
+  justify-self: start;
+}
+.library-empty {
+  padding: 40px 0;
+  font-size: 13px;
+  text-align: center;
+}
+.share-form,
+.share-result,
+.share-import {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.share-paper-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 180px;
+  overflow: auto;
+}
+.share-paper-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+.share-paper-list span {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.share-scope {
+  font-size: 12px;
+  line-height: 1.85;
+  color: #718178;
+}
+.share-created {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--green);
+  font-size: 14px;
+}
+.share-code-form {
+  align-items: flex-end;
+}
+.share-code-form > label {
+  flex: 1;
+}
+.share-code-form .btn {
+  flex-shrink: 0;
+}
+.share-preview-heading h3 {
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+.share-preview-heading p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+.share-receive-list {
+  max-height: 320px;
+  overflow: auto;
+}
+.share-receive-list > label {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+.share-receive-list > label > span:first-of-type {
+  flex: 1;
+  min-width: 0;
+}
+.share-receive-list strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.share-receive-list small {
+  color: var(--muted);
+  display: block;
+  margin-top: 7px;
+  overflow-wrap: anywhere;
+}
+.share-record {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.share-record > div {
+  flex: 1;
+  min-width: 0;
+}
+.share-record strong {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.share-record p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 8px 0;
+}
+.share-record input {
+  font-size: 11px;
+}
+@media (max-width: 767px) {
+  .pdf-editor-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pdf-source {
+    order: 2;
+    position: static;
+  }
+  .pdf-source-content {
+    height: 320px;
+  }
+  .pdf-editor-footer {
+    position: static;
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 0;
+  }
+  .pdf-editor-footer > div {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .library-form-row {
+    flex-wrap: wrap;
+  }
+  .library-form-row > .grow {
+    flex-basis: 100%;
+  }
+  .library-form-row > label {
+    min-width: 75px;
+  }
+  .pdf-editor-toolbar {
+    gap: 9px;
+  }
+  .pdf-editor-toolbar > .btn {
+    margin-left: 0;
+  }
+  .manage-table-selectable .manage-table-head,
+  .manage-table-selectable .manage-table-row {
+    grid-template-columns: 20px minmax(0, 1fr) 105px;
+    gap: 10px;
+  }
+  .manage-table-selectable .manage-table-head > span:last-child {
+    display: none;
+  }
+  .manage-table-selectable .manage-table-row > .text-button,
+  .manage-table-selectable .manage-table-row > .small {
+    grid-column: 2 / -1;
+    display: inline-flex;
+    padding: 0;
+  }
+  .manage-table-selectable .status-label {
+    font-size: 11px;
+  }
+  .share-code-form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .share-record {
+    gap: 7px;
+  }
+  .share-record > .icon-button {
+    width: 30px;
+    flex-shrink: 0;
+  }
+  .share-receive-list > label {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .library-selection-toolbar > .library-search {
+    flex-basis: 100%;
+  }
+}

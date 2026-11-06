@@ -1,0 +1,225 @@
+.home-room-theme {
+  --display: Geist, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --green: #237a5d;
+  --line: #dbe6e4;
+  color: #243b3e;
+  background: #fff;
+}
+.home-room-theme .home-header {
+  width: min(1100px, calc(100% - 48px));
+  background: #ffffffbf;
+  box-shadow:
+    0 8px 25px #4967730d,
+    inset 0 1px 0 #fff;
+}
+.home-room-theme .home-brand strong {
+  color: #164b3c;
+}
+.home-room-theme .home-hero {
+  display: flex;
+  flex-direction: column;
+  height: min(980px, calc(100svh - 85px));
+  min-height: 570px;
+  background: #eff5f7;
+  isolation: isolate;
+}
+.home-room-theme .hero-copy {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  padding: 88px 22px 12px;
+}
+.home-room-theme .hero-copy h1 {
+  color: #194f3e;
+  font-size: 74px;
+  line-height: 1.13;
+  font-weight: 600;
+  margin: 0 0 9px;
+}
+.home-room-theme .hero-line {
+  font-size: 30px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+.home-room-theme .hero-subtitle {
+  font-size: 16px;
+  color: #6c828a;
+  margin: 8px 0 15px;
+}
+.home-room-theme .hero-actions {
+  gap: 20px;
+}
+.home-room-theme .glass-button {
+  background: #28845f;
+  border-color: #278061;
+  box-shadow:
+    inset 0 1px 0 #ffffff4d,
+    0 3px 0 #1c624c;
+  font-size: 15px;
+}
+.home-room-theme .glass-button:hover {
+  background: #237753;
+  box-shadow:
+    inset 0 1px 0 #ffffff4d,
+    0 4px 0 #1b6049;
+}
+.reading-room-visual {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  isolation: isolate;
+  margin: 0;
+}
+.reading-room-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+.home-room-theme .home-features {
+  border-top: 1px solid #dfebe6;
+}
+.home-room-theme .home-features h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.home-room-theme .home-start {
+  background: #edf5f2;
+}
+.home-room-theme .auth-heading h2 {
+  font-weight: 600;
+  font-size: 28px;
+}
+.home-room-theme .auth-symbol {
+  width: 50px;
+  height: 54px;
+}
+.home-room-theme .auth-symbol img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 8px;
+  mix-blend-mode: multiply;
+}
+@media (min-width: 901px) and (max-height: 850px) {
+  .home-room-theme .hero-copy {
+    padding-top: 79px;
+  }
+  .home-room-theme .hero-copy h1 {
+    font-size: 56px;
+    margin-bottom: 4px;
+  }
+  .home-room-theme .hero-line {
+    font-size: 27px;
+  }
+  .home-room-theme .hero-subtitle {
+    font-size: 14px;
+    margin: 5px 0 11px;
+  }
+}
+@media (max-width: 900px) and (orientation: portrait) {
+  .home-room-theme .home-hero {
+    height: auto;
+    min-height: 0;
+  }
+  .home-room-theme .reading-room-visual {
+    flex: none;
+    height: 510px;
+  }
+  .home-room-theme .hero-copy {
+    padding-top: 102px;
+  }
+  .home-room-theme .hero-copy h1 {
+    font-size: 66px;
+  }
+}
+@media (max-width: 699px) {
+  .home-room-theme .home-header {
+    width: calc(100% - 28px);
+  }
+  .home-room-theme .hero-copy {
+    padding: 83px 18px 12px;
+  }
+  .home-room-theme .hero-copy h1 {
+    font-size: 53px;
+    margin-bottom: 8px;
+  }
+  .home-room-theme .hero-line {
+    font-size: 25px;
+    line-height: 1.45;
+  }
+  .home-room-theme .hero-subtitle {
+    font-size: 13px;
+    max-width: 320px;
+    margin: 8px auto 13px;
+  }
+  .home-room-theme .hero-actions {
+    gap: 15px;
+  }
+  .home-room-theme .hero-actions .glass-button {
+    font-size: 14px;
+    min-height: 44px;
+  }
+  .home-room-theme .reading-room-visual {
+    height: 310px;
+  }
+  .home-room-theme .home-features h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 699px) and (max-height: 700px) {
+  .home-room-theme .hero-copy {
+    padding-top: 72px;
+  }
+  .home-room-theme .hero-copy h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  .home-room-theme .hero-line {
+    font-size: 23px;
+    line-height: 1.4;
+  }
+  .home-room-theme .hero-subtitle {
+    display: none;
+  }
+  .home-room-theme .hero-actions {
+    margin-top: 10px;
+  }
+  .home-room-theme .reading-room-visual {
+    height: 235px;
+  }
+}
+@media (orientation: landscape) and (max-height: 650px) and (min-width: 560px) {
+  .home-room-theme .home-hero {
+    height: calc(100svh - 56px);
+    min-height: 0;
+  }
+  .home-room-theme .hero-copy {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-top: 73px;
+  }
+  .home-room-theme .hero-copy h1 {
+    font-size: 32px;
+    margin: 0;
+  }
+  .home-room-theme .hero-line {
+    font-size: 20px;
+  }
+  .home-room-theme .hero-subtitle {
+    display: none;
+  }
+  .home-room-theme .hero-actions {
+    margin: 0;
+  }
+  .home-room-theme .hero-actions .glass-button {
+    min-height: 40px;
+    font-size: 13px;
+  }
+}
